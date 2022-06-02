@@ -1,0 +1,93 @@
+﻿<Page x:Class="ISApteka.pages.StockPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ISApteka.pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="StockPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60px"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="55px"/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBox Name="TbSearch" TextChanged="TbSearch_TextChanged" VerticalContentAlignment="Center" />
+            <ComboBox Name="CbFilter" SelectionChanged="CbFilter_SelectionChanged" Grid.Column="1"
+                      Margin="3px" Height="45px" Width="180px"/>
+            <ComboBox Name="CbSort" SelectionChanged="CbSort_SelectionChanged" Grid.Column="2"
+                      Margin="3px" Height="45px" Width="180px"/>
+
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal"
+                        Grid.Column="3">
+                <TextBlock FontSize="15" Name="TbCount"></TextBlock>
+                <TextBlock FontSize="15" Text=" из "></TextBlock>
+                <TextBlock FontSize="15" Name="TbCountAll"></TextBlock>
+            </StackPanel>
+        </Grid>
+
+        <Button Name="BtnAdd" Click="BtnAdd_Click" Grid.Row="2" HorizontalAlignment="Left" Margin="5,0,0,0" Content="Добавить"></Button>
+        <Button Name="BtnEdit" Click="BtnEdit_Click" Grid.Row="2" HorizontalAlignment="Right" Margin="0,0,5,0" Content="Изменить"></Button>
+      
+        <ListBox Name="LbStock" Grid.Row="1" HorizontalAlignment="Stretch"
+                 SelectionChanged="LbStock_SelectionChanged">
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="ListBoxItem">
+                    <Setter Property="BorderBrush" Value="#999"></Setter>
+                    <Setter Property="BorderThickness" Value="2"></Setter>
+                    <Setter Property="Margin" Value="5"></Setter>
+                    <Setter Property="FontSize" Value="18"></Setter>
+                    <Style.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="5"></Setter>
+                        </Style>
+                    </Style.Resources>
+                </Style>
+            </ListBox.ItemContainerStyle>
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="120px"/>
+                            <ColumnDefinition Width="600px"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="200px"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Border CornerRadius="5,5,5,5">
+                            <Border.Background>
+                                <ImageBrush Stretch="UniformToFill" ImageSource="{Binding FixedImageStock}"></ImageBrush>
+                            </Border.Background>
+                        </Border>
+
+                        <StackPanel Orientation="Vertical" Grid.Column="1">
+                            <TextBlock>
+                                <Run Text="{Binding Supplier.SupplierName}"></Run>
+                                <Run Text=" | "></Run>
+                                <Run Text="{Binding DrugType.DrugTypeName}"></Run>
+                            </TextBlock>
+
+                            <TextBlock>
+                                <Run Text="{Binding Description}"></Run>
+                            </TextBlock>
+
+                            <TextBlock>
+                                <Run Text="Осталось на складе:"></Run>
+                                <Run Text="{Binding CountInStock}"></Run>
+                            </TextBlock>
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</Page>

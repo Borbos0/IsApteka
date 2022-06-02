@@ -1,0 +1,44 @@
+﻿<Page x:Class="ISApteka.pages.AddStockPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ISApteka.pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AddStockPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Column="1" Text="Поставщик" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,25,0,0"></TextBlock>
+        <TextBox Grid.Column="1" Name="LbSupplier" VerticalAlignment="Bottom" Width="250px" Margin="0,0,0,25"></TextBox>
+
+        <TextBlock Grid.Column="2" Text="Количество на складе" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,25,0,0"></TextBlock>
+        <TextBox Grid.Column="2" Name="LbCountInStock" VerticalAlignment="Bottom" Width="250px" Margin="0,0,0,25"></TextBox>
+
+        <TextBlock Grid.Row="1" Grid.Column="1" Text="Название препарата" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,25,0,0"></TextBlock>
+        <TextBox Grid.Row="1" Grid.Column="1" Name="LbDrugName" VerticalAlignment="Bottom" Width="250px" Margin="0,0,0,25"></TextBox>
+
+        <TextBlock Grid.Row="1" Grid.Column="2" Text="Тип препарата" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,25,0,0"></TextBlock>
+        <TextBox Grid.Row="1" Grid.Column="2" Name="LbDrugType" VerticalAlignment="Bottom" Width="250px" Margin="0,0,0,25"></TextBox>
+
+        <TextBlock Grid.Row="2" Grid.Column="1" Text="Описание" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,25,0,0"></TextBlock>
+        <TextBox Grid.Row="2" Grid.Column="1" Name="LbDescription" VerticalAlignment="Bottom" Width="250px" Margin="0,0,0,25"></TextBox>
+
+        <TextBlock Grid.Row="2" Grid.Column="2" Text="Полка на складе" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,25,0,0"></TextBlock>
+        <TextBox Grid.Row="2" Grid.Column="2" Name="LbStockShelf" VerticalAlignment="Bottom" Width="250px" Margin="0,0,0,25"></TextBox>
+
+        <Button Name="BtnSave" Click="BtnSave_Click" Grid.Row="3" Grid.Column="1" Content="Сохранить" Width="120px" Grid.ColumnSpan="2"></Button>
+    </Grid>
+</Page>
