@@ -17,6 +17,7 @@
           <ScalarProperty Name="PassNum" ColumnName="PassNum" />
           <ScalarProperty Name="PassSer" ColumnName="PassSer" />
           <ScalarProperty Name="PassReg" ColumnName="PassReg" />
+          <ScalarProperty Name="BillImage" ColumnName="BillImage" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -59,6 +60,7 @@
           <ScalarProperty Name="Description" ColumnName="Description" />
           <ScalarProperty Name="StockShelf" ColumnName="StockShelf" />
           <ScalarProperty Name="DrugImage" ColumnName="DrugImage" />
+          <ScalarProperty Name="DateEnd" ColumnName="DateEnd" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

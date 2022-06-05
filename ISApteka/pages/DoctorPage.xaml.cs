@@ -25,6 +25,8 @@ namespace ISApteka.pages
             InitializeComponent();
             LbDoctor.ItemsSource = DB.db.Doctor.ToList();
             TbCountAll.Text = LbDoctor.Items.Count.ToString();
+            BtnEdit.Visibility = Visibility.Hidden;
+            BtnDelete.Visibility = Visibility.Hidden;
 
             CbFilter.Items.Add("Все ученые степени");
             foreach (var doctorT in DB.db.DoctorDegree)
@@ -59,7 +61,41 @@ namespace ISApteka.pages
 
         private void LbDoctor_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            FindDoctor();
+            if (LbDoctor.SelectedItem != null)
+            {
+                BtnEdit.Visibility = Visibility.Visible;
+                BtnDelete.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void BtnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            ChangePage.MainFrame.Navigate(new AddDoctorPage(new Doctor()));
+        }
+
+        private void BtnEdit_Click(object sender, RoutedEventArgs e)
+        {
+            var doctorSelect = LbDoctor.SelectedItem;
+            ChangePage.MainFrame.Navigate(new AddDoctorPage((Doctor)doctorSelect));
+        }
+
+        private void BtnDelete_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (MessageBox.Show("Удалить доктора?", "Внимание", MessageBoxButton.YesNoCancel) == MessageBoxResult.Yes)
+                {
+                    Doctor doctor = LbDoctor.SelectedItem as Doctor;
+                    DB.db.Doctor.Remove(doctor);
+                    DB.db.SaveChanges();
+                    MessageBox.Show("Доктор удален");
+                    FindDoctor();
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Непредвиденная ошибка");
+            }
         }
     }
 }

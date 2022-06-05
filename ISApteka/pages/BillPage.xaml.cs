@@ -16,22 +16,22 @@ using System.Windows.Shapes;
 namespace ISApteka.pages
 {
     /// <summary>
-    /// Логика взаимодействия для StockPage.xaml
+    /// Логика взаимодействия для BillPage.xaml
     /// </summary>
-    public partial class StockPage : Page
+    public partial class BillPage : Page
     {
-        public StockPage()
+        public BillPage()
         {
             InitializeComponent();
-            LbStock.ItemsSource = DB.db.Stock.ToList();
-            TbCountAll.Text = LbStock.Items.Count.ToString();
+            LbBill.ItemsSource = DB.db.Bill.ToList();
+            TbCountAll.Text = LbBill.Items.Count.ToString();
             BtnEdit.Visibility = Visibility.Hidden;
             BtnDelete.Visibility = Visibility.Hidden;
 
             CbFilter.Items.Add("Все препараты");
-            foreach (var stockT in DB.db.DrugType)
+            foreach (var billT in DB.db.Bill)
             {
-                CbFilter.Items.Add(stockT.DrugTypeName);
+                CbFilter.Items.Add(billT.ShortClientName);
             }
             CbFilter.SelectedIndex = 0;
 
@@ -42,75 +42,76 @@ namespace ISApteka.pages
             CbSort.SelectedIndex = 0;
         }
 
-        public void FindStock()
+        public void FindBill()
         {
-            var stock = DB.db.Stock.Where(x => x.DrugName.Contains(TbSearch.Text)).ToList();
+            var bill = DB.db.Bill.Where(x => x.Description.Contains(TbSearch.Text)).ToList();
+
+            LbBill.ItemsSource = bill;
+            TbCount.Text = bill.Count.ToString();
 
             switch (CbSort.SelectedIndex)
             {
                 case 1:
-                    stock = stock.OrderBy(s => s.CountInStock).ToList();
+                    bill = bill.OrderBy(s => s.Price).ToList();
                     break;
                 case 2:
-                    stock = stock.OrderByDescending(s => s.CountInStock).ToList();
+                    bill = bill.OrderByDescending(s => s.Price).ToList();
                     break;
             }
 
             if (CbFilter.SelectedIndex > 0)
             {
-                string drugType = CbFilter.SelectedItem.ToString();
-                stock = stock.Where(x => x.DrugType.DrugTypeName == drugType).ToList();
+                string drugName = CbFilter.SelectedItem.ToString();
+                bill = bill.Where(x => x.Stock.DrugName == drugName).ToList();
             }
-            LbStock.ItemsSource = stock;
-            TbCount.Text = stock.Count.ToString();
         }
 
         private void TbSearch_TextChanged(object sender, TextChangedEventArgs e)
         {
-            FindStock();
+            FindBill();
         }
 
         private void CbFilter_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            FindStock();
+            FindBill();
         }
 
         private void CbSort_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            FindStock();
+            FindBill();
         }
 
-        private void LbStock_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void LbBill_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (LbStock.SelectedItem != null)
+            if (LbBill.SelectedItem != null)
             {
                 BtnEdit.Visibility = Visibility.Visible;
                 BtnDelete.Visibility = Visibility.Visible;
             }
         }
 
-        private void BtnEdit_Click(object sender, RoutedEventArgs e)
-        {
-            var drugSelect = LbStock.SelectedItem;
-            ChangePage.MainFrame.Navigate(new AddStockPage((Stock)drugSelect));
-        }
-
         private void BtnAdd_Click(object sender, RoutedEventArgs e)
         {
-            ChangePage.MainFrame.Navigate(new AddStockPage(new Stock()));
+            ChangePage.MainFrame.Navigate(new AddBillPage(new Bill()));
+        }
+
+        private void BtnEdit_Click(object sender, RoutedEventArgs e)
+        {
+            var billSelect = LbBill.SelectedItem;
+            ChangePage.MainFrame.Navigate(new AddBillPage((Bill)billSelect));
         }
 
         private void BtnDelete_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                if (MessageBox.Show("Удалить препарат?", "Внимание", MessageBoxButton.YesNoCancel) == MessageBoxResult.Yes)
+                if (MessageBox.Show("Удалить квитанцию об оплате?", "Внимание", MessageBoxButton.YesNoCancel) == MessageBoxResult.Yes)
                 {
-                    Stock stock = LbStock.SelectedItem as Stock;
-                    DB.db.Stock.Remove(stock);
+                    Bill bill = LbBill.SelectedItem as Bill;
+                    DB.db.Bill.Remove(bill);
                     DB.db.SaveChanges();
-                    MessageBox.Show("Препарат удален");
-                    FindStock();
+                    MessageBox.Show("Квитанция об оплате удален");
+                    FindBill();
                 }
             }
             catch (Exception)

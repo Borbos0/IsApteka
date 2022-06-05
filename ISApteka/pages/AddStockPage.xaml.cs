@@ -47,11 +47,11 @@ namespace ISApteka.pages
         }
         public void CheckStock()
         {
-            TbDrugName.Text = stock.DrugImage;
+            TbDrugName.Text = stock.DrugName;
             TbCountInStock.Text = stock.CountInStock.ToString();
             TbStockShelf.Text = stock.StockShelf.ToString();
             TbDescription.Text = stock.Description;
-            //TbDate
+            DpDate.Text = stock.DateEnd;
 
             if (stock.DrugType == null)
             {
@@ -73,7 +73,38 @@ namespace ISApteka.pages
 
         private void BtnSave_Click(object sender, RoutedEventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(TbCountInStock.Text) || string.IsNullOrWhiteSpace(TbDrugName.Text)
+                || string.IsNullOrWhiteSpace(TbDescription.Text) || string.IsNullOrWhiteSpace(TbStockShelf.Text)
+                || CbDrugType.SelectedItem == null || CbSupplier.SelectedItem == null)
+            {
+                MessageBox.Show("Заполнены не все поля");
+            }
+            else
+            {
+                try
+                {
+                    stock.DrugName = TbDrugName.Text;
+                    stock.Description = TbDescription.Text;
+                    stock.CountInStock = int.Parse(TbCountInStock.Text);
+                    stock.StockShelf = int.Parse(TbStockShelf.Text);
+                    stock.DrugType = (DrugType)CbDrugType.SelectedItem;
+                    stock.Supplier = (Supplier)CbSupplier.SelectedItem;
+                    stock.DrugImage = null;
+                    stock.DateEnd = DpDate.Text;
 
+                    if(stock.StockID == 0)
+                    {
+                        DB.db.Stock.Add(stock);
+                    }
+                    DB.db.SaveChanges();
+
+                    ChangePage.MainFrame.Navigate(new StockPage());
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Непредвиденная ошибка, проверьте правильность ввода данных");
+                }
+            }
         }
     }
 }

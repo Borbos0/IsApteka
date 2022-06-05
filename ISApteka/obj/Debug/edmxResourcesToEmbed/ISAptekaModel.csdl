@@ -13,10 +13,11 @@
     <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="Price" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
     <Property Name="Status" Type="Int32" />
-    <Property Name="DateBeg" Type="DateTime" Precision="3" />
+    <Property Name="DateBeg" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="PassNum" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="PassSer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="PassReg" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="BillImage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="Doctor" Relationship="Self.FK_Bill_Doctor" FromRole="Bill" ToRole="Doctor" />
     <NavigationProperty Name="Stock" Relationship="Self.FK_Bill_Stock" FromRole="Bill" ToRole="Stock" />
   </EntityType>
@@ -61,6 +62,7 @@
     <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="StockShelf" Type="Int32" Nullable="false" />
     <Property Name="DrugImage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DateEnd" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="Bill" Relationship="Self.FK_Bill_Stock" FromRole="Stock" ToRole="Bill" />
     <NavigationProperty Name="DrugType" Relationship="Self.FK_Stock_DrugType" FromRole="Stock" ToRole="DrugType" />
     <NavigationProperty Name="Supplier" Relationship="Self.FK_Stock_Supplier" FromRole="Stock" ToRole="Supplier" />

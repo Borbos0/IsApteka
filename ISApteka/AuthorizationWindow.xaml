@@ -14,7 +14,7 @@
         <TextBlock Text="Аптека «Ромашка»" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,130"></TextBlock>
         <TextBlock Text="Регистрация пользователя" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,85"></TextBlock>
         <Image Source="logo/logo.png" VerticalAlignment="Top" HorizontalAlignment="Center" Width="120px"></Image>
-        <TextBlock Text="Версия сборки 0.8.3.5" VerticalAlignment="Bottom"></TextBlock>
+        <TextBlock Text="Версия сборки 0.8.8.1" VerticalAlignment="Bottom"></TextBlock>
         <TextBlock Text="Пароль:" VerticalAlignment="Center" Margin="140,0,0,0"></TextBlock>
     </Grid>
 </Window>

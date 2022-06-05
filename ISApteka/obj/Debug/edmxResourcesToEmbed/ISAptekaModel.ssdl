@@ -13,10 +13,11 @@
     <Property Name="Description" Type="nvarchar(max)" />
     <Property Name="Price" Type="decimal" Precision="10" Scale="2" Nullable="false" />
     <Property Name="Status" Type="int" />
-    <Property Name="DateBeg" Type="datetime" />
+    <Property Name="DateBeg" Type="nvarchar(max)" />
     <Property Name="PassNum" Type="nvarchar(max)" />
     <Property Name="PassSer" Type="nvarchar(max)" />
     <Property Name="PassReg" Type="nvarchar(max)" />
+    <Property Name="BillImage" Type="nvarchar(max)" />
   </EntityType>
   <EntityType Name="Doctor">
     <Key>
@@ -55,6 +56,7 @@
     <Property Name="Description" Type="nvarchar(max)" />
     <Property Name="StockShelf" Type="int" Nullable="false" />
     <Property Name="DrugImage" Type="nvarchar(max)" />
+    <Property Name="DateEnd" Type="nvarchar(max)" />
   </EntityType>
   <EntityType Name="Supplier">
     <Key>

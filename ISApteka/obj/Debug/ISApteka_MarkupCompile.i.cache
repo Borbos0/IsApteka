@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\User\Desktop\ISApteka\ISApteka\App.xaml
-71372251079
+9339664959
 22116250404
-27-275955880
+30-283611397
 18-1189002947
-AuthorizationWindow.xaml;MainWindow.xaml;pages\AddStockPage.xaml;pages\Bill.xaml;pages\DoctorPage.xaml;pages\MainPage.xaml;pages\StockPage.xaml;
+AuthorizationWindow.xaml;MainWindow.xaml;pages\AddBillPage.xaml;pages\AddDoctorPage.xaml;pages\AddStockPage.xaml;pages\BillPage.xaml;pages\DoctorPage.xaml;pages\MainPage.xaml;pages\StockPage.xaml;
 
-False
+True
 

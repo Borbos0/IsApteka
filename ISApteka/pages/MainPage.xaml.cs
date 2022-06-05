@@ -37,7 +37,7 @@ namespace ISApteka.pages
 
         private void BtnBill_Click(object sender, RoutedEventArgs e)
         {
-            ChangePage.MainFrame.Navigate(new Bill());
+            ChangePage.MainFrame.Navigate(new BillPage());
         }
     }
 }

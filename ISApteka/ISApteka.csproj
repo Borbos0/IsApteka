@@ -67,6 +67,7 @@
     <Compile Include="Bill.cs">
       <DependentUpon>IsAptekaModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="classes\Bill.cs" />
     <Compile Include="classes\Doctor.cs" />
     <Compile Include="classes\Stock.cs" />
     <Compile Include="Doctor.cs">
@@ -93,11 +94,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>IsAptekaModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="pages\AddBillPage.xaml.cs">
+      <DependentUpon>AddBillPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\AddDoctorPage.xaml.cs">
+      <DependentUpon>AddDoctorPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="pages\AddStockPage.xaml.cs">
       <DependentUpon>AddStockPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="pages\Bill.xaml.cs">
-      <DependentUpon>Bill.xaml</DependentUpon>
+    <Compile Include="pages\BillPage.xaml.cs">
+      <DependentUpon>BillPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="pages\DoctorPage.xaml.cs">
       <DependentUpon>DoctorPage.xaml</DependentUpon>
@@ -135,11 +142,19 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="pages\AddBillPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\AddDoctorPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="pages\AddStockPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="pages\Bill.xaml">
+    <Page Include="pages\BillPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -198,16 +213,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="img\imageDoc.png" />
-    <Content Include="IsAptekaModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>IsAptekaModel.edmx</DependentUpon>
-      <LastGenOutput>IsAptekaModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="IsAptekaModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>IsAptekaModel.edmx</DependentUpon>
-      <LastGenOutput>IsAptekaModel.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="logo\icon.jpg" />
@@ -220,6 +225,27 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="img\imageStock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\ibuprofen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\ascrb.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\ImageBill.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="IsAptekaModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>IsAptekaModel.edmx</DependentUpon>
+      <LastGenOutput>IsAptekaModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="IsAptekaModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>IsAptekaModel.edmx</DependentUpon>
+      <LastGenOutput>IsAptekaModel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -28,6 +28,7 @@ namespace ISApteka
         public string Description { get; set; }
         public int StockShelf { get; set; }
         public string DrugImage { get; set; }
+        public string DateEnd { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Bill> Bill { get; set; }

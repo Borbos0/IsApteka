@@ -2,8 +2,10 @@
 FC:\Users\User\Desktop\ISApteka\ISApteka\App.xaml;;
 FC:\Users\User\Desktop\ISApteka\ISApteka\AuthorizationWindow.xaml;;
 FC:\Users\User\Desktop\ISApteka\ISApteka\MainWindow.xaml;;
+FC:\Users\User\Desktop\ISApteka\ISApteka\pages\AddBillPage.xaml;;
+FC:\Users\User\Desktop\ISApteka\ISApteka\pages\AddDoctorPage.xaml;;
 FC:\Users\User\Desktop\ISApteka\ISApteka\pages\AddStockPage.xaml;;
-FC:\Users\User\Desktop\ISApteka\ISApteka\pages\Bill.xaml;;
+FC:\Users\User\Desktop\ISApteka\ISApteka\pages\BillPage.xaml;;
 FC:\Users\User\Desktop\ISApteka\ISApteka\pages\DoctorPage.xaml;;
 FC:\Users\User\Desktop\ISApteka\ISApteka\pages\MainPage.xaml;;
 FC:\Users\User\Desktop\ISApteka\ISApteka\pages\StockPage.xaml;;

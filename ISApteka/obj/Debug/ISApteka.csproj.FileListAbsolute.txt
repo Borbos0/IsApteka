@@ -30,6 +30,9 @@ C:\Users\User\Desktop\ISApteka\ISApteka\obj\Debug\pages\DoctorPage.g.cs
 C:\Users\User\Desktop\ISApteka\ISApteka\obj\Debug\pages\DoctorPage.baml
 C:\Users\User\Desktop\ISApteka\ISApteka\obj\Debug\pages\AddStockPage.g.cs
 C:\Users\User\Desktop\ISApteka\ISApteka\obj\Debug\pages\AddStockPage.baml
-C:\Users\User\Desktop\ISApteka\ISApteka\obj\Debug\pages\Bill.g.cs
-C:\Users\User\Desktop\ISApteka\ISApteka\obj\Debug\pages\Bill.baml
-C:\Users\User\Desktop\ISApteka\ISApteka\obj\Debug\ISApteka.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\ISApteka\ISApteka\obj\Debug\pages\AddBillPage.g.cs
+C:\Users\User\Desktop\ISApteka\ISApteka\obj\Debug\pages\AddDoctorPage.g.cs
+C:\Users\User\Desktop\ISApteka\ISApteka\obj\Debug\pages\AddBillPage.baml
+C:\Users\User\Desktop\ISApteka\ISApteka\obj\Debug\pages\AddDoctorPage.baml
+C:\Users\User\Desktop\ISApteka\ISApteka\obj\Debug\pages\BillPage.g.cs
+C:\Users\User\Desktop\ISApteka\ISApteka\obj\Debug\pages\BillPage.baml
