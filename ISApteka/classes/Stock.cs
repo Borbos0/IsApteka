@@ -12,7 +12,7 @@ namespace ISApteka
         {
             get
             {
-                if (String.IsNullOrEmpty(DrugImage) || String.IsNullOrWhiteSpace(DrugImage)) return @"/logo/logo.png";
+                if (String.IsNullOrEmpty(DrugImage) || String.IsNullOrWhiteSpace(DrugImage)) return @"/img/imageStock.png";
                 else return DrugImage;
             }
         }

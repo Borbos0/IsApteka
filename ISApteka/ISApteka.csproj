@@ -197,7 +197,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="img\" />
+    <Resource Include="img\imageDoc.png" />
+    <Content Include="IsAptekaModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>IsAptekaModel.edmx</DependentUpon>
+      <LastGenOutput>IsAptekaModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="IsAptekaModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>IsAptekaModel.edmx</DependentUpon>
+      <LastGenOutput>IsAptekaModel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="logo\icon.jpg" />
@@ -209,16 +219,7 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="IsAptekaModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>IsAptekaModel.edmx</DependentUpon>
-      <LastGenOutput>IsAptekaModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="IsAptekaModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>IsAptekaModel.edmx</DependentUpon>
-      <LastGenOutput>IsAptekaModel.cs</LastGenOutput>
-    </Content>
+    <Resource Include="img\imageStock.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

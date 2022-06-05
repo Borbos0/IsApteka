@@ -26,7 +26,7 @@ namespace ISApteka
 
         public void AuthorizationUser()
         {
-            var auth = DB.db.Users.FirstOrDefault(u => u.UserLogin == TbLogin.Text);
+            var auth = DB.db.Users.FirstOrDefault(u => u.UserLogin == TbLogin.Password);
 
             try
             {

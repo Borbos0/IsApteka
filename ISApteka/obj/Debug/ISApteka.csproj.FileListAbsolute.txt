@@ -1,7 +1,6 @@
 C:\Users\User\Desktop\ISApteka\ISApteka\bin\Debug\ISApteka.exe.config
 C:\Users\User\Desktop\ISApteka\ISApteka\bin\Debug\ISApteka.exe
 C:\Users\User\Desktop\ISApteka\ISApteka\bin\Debug\ISApteka.pdb
-C:\Users\User\Desktop\ISApteka\ISApteka\obj\Debug\ISApteka.csproj.AssemblyReference.cache
 C:\Users\User\Desktop\ISApteka\ISApteka\obj\Debug\AuthorizationWindow.g.cs
 C:\Users\User\Desktop\ISApteka\ISApteka\obj\Debug\MainWindow.g.cs
 C:\Users\User\Desktop\ISApteka\ISApteka\obj\Debug\App.g.cs
@@ -33,3 +32,4 @@ C:\Users\User\Desktop\ISApteka\ISApteka\obj\Debug\pages\AddStockPage.g.cs
 C:\Users\User\Desktop\ISApteka\ISApteka\obj\Debug\pages\AddStockPage.baml
 C:\Users\User\Desktop\ISApteka\ISApteka\obj\Debug\pages\Bill.g.cs
 C:\Users\User\Desktop\ISApteka\ISApteka\obj\Debug\pages\Bill.baml
+C:\Users\User\Desktop\ISApteka\ISApteka\obj\Debug\ISApteka.csproj.AssemblyReference.cache

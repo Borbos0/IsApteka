@@ -20,9 +20,9 @@
         </Grid>
         <Frame Grid.Row="1" Name="MainFrame" NavigationUIVisibility="Hidden" ContentRendered="MainFrame_ContentRendered"></Frame>
         <Image Grid.Row="1" Opacity=".1" Panel.ZIndex="-1" Source="logo/logo.png"></Image>
-        <Button Name="BtnBack" Click="BtnBack_Click" Content="Назад" HorizontalAlignment="Right" Margin="0,0,5,0"></Button>
+        <Button Name="BtnBack" Click="BtnBack_Click" Content="Назад" HorizontalAlignment="Right" Margin="0,0,5,0" IsCancel="True"></Button>
         <Grid Grid.Row="2" Background="Azure">
-            <TextBlock HorizontalAlignment="Left" Width="400px" Name="Login" VerticalAlignment="Center" Margin="3,0,0,0">Пользователь</TextBlock>
+            <TextBlock HorizontalAlignment="Left" Width="650px" Name="Login" VerticalAlignment="Center" Margin="3,0,0,0">Пользователь</TextBlock>
             <Button Name="BtnExit" Click="BtnExit_Click" Content="Выйти" HorizontalAlignment="Right" Height="30px" Margin="0,0,3,0"></Button>
         </Grid>
     </Grid>

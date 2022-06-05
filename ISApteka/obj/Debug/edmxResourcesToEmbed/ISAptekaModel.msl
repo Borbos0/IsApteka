@@ -12,6 +12,11 @@
           <ScalarProperty Name="ShortClientName" ColumnName="ShortClientName" />
           <ScalarProperty Name="Description" ColumnName="Description" />
           <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="DateBeg" ColumnName="DateBeg" />
+          <ScalarProperty Name="PassNum" ColumnName="PassNum" />
+          <ScalarProperty Name="PassSer" ColumnName="PassSer" />
+          <ScalarProperty Name="PassReg" ColumnName="PassReg" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

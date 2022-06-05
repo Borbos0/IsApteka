@@ -19,8 +19,8 @@
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
 
-        <Button Name="BtnStock" Content="Склад" Click="BtnStock_Click"></Button>
-        <Button Name="BtnDoctor" Content="Доктора" Click="BtnDoctor_Click" Grid.Row="1"></Button>
-        <Button Name="BtnBill" Content="Квитанции" Click="BtnBill_Click" Grid.Column="1"></Button>
+        <Button Name="BtnStock" Width="150px" Content="Склад" Click="BtnStock_Click"></Button>
+        <Button Name="BtnDoctor" Width="150px" Content="Доктора" Click="BtnDoctor_Click" Grid.Row="1"></Button>
+        <Button Name="BtnBill" Width="150px" Content="Квитанции" Click="BtnBill_Click" Grid.Column="1"></Button>
     </Grid>
 </Page>

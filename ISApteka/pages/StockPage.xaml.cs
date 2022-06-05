@@ -26,6 +26,7 @@ namespace ISApteka.pages
             LbStock.ItemsSource = DB.db.Stock.ToList();
             TbCountAll.Text = LbStock.Items.Count.ToString();
             BtnEdit.Visibility = Visibility.Hidden;
+            BtnDelete.Visibility = Visibility.Hidden;
 
             CbFilter.Items.Add("Все препараты");
             foreach (var stockT in DB.db.DrugType)
@@ -35,6 +36,8 @@ namespace ISApteka.pages
             CbFilter.SelectedIndex = 0;
 
             CbSort.Items.Add("Сортировка");
+            CbSort.Items.Add("По возрастанию");
+            CbSort.Items.Add("По убыванию");
 
             CbSort.SelectedIndex = 0;
         }
@@ -42,6 +45,16 @@ namespace ISApteka.pages
         public void FindStock()
         {
             var stock = DB.db.Stock.Where(x => x.DrugName.Contains(TbSearch.Text)).ToList();
+
+            switch (CbSort.SelectedIndex)
+            {
+                case 1:
+                    stock = stock.OrderBy(s => s.CountInStock).ToList();
+                    break;
+                case 2:
+                    stock = stock.OrderByDescending(s => s.CountInStock).ToList();
+                    break;
+            }
 
             if (CbFilter.SelectedIndex > 0)
             {
@@ -72,18 +85,24 @@ namespace ISApteka.pages
             if (LbStock.SelectedItem != null)
             {
                 BtnEdit.Visibility = Visibility.Visible;
+                BtnDelete.Visibility = Visibility.Visible;
             }
         }
 
         private void BtnEdit_Click(object sender, RoutedEventArgs e)
         {
             var drugSelect = LbStock.SelectedItem;
-            ChangePage.MainFrame.Navigate(new AddStockPage());
+            ChangePage.MainFrame.Navigate(new AddStockPage((Stock)drugSelect));
         }
 
         private void BtnAdd_Click(object sender, RoutedEventArgs e)
         {
-            ChangePage.MainFrame.Navigate(new AddStockPage());
+            ChangePage.MainFrame.Navigate(new AddStockPage(new Stock()));
+        }
+
+        private void BtnDelete_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

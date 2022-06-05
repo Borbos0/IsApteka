@@ -22,23 +22,26 @@
         </Grid.ColumnDefinitions>
 
         <TextBlock Grid.Column="1" Text="Поставщик" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,25,0,0"></TextBlock>
-        <TextBox Grid.Column="1" Name="LbSupplier" VerticalAlignment="Bottom" Width="250px" Margin="0,0,0,25"></TextBox>
+        <ComboBox Grid.Column="1" Name="CbSupplier" VerticalAlignment="Bottom" Width="250px" Height="45px" Margin="0,0,0,25"></ComboBox>
 
         <TextBlock Grid.Column="2" Text="Количество на складе" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,25,0,0"></TextBlock>
-        <TextBox Grid.Column="2" Name="LbCountInStock" VerticalAlignment="Bottom" Width="250px" Margin="0,0,0,25"></TextBox>
+        <TextBox Grid.Column="2" Name="TbCountInStock" VerticalAlignment="Bottom" Width="250px" Margin="0,0,0,25"></TextBox>
 
         <TextBlock Grid.Row="1" Grid.Column="1" Text="Название препарата" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,25,0,0"></TextBlock>
-        <TextBox Grid.Row="1" Grid.Column="1" Name="LbDrugName" VerticalAlignment="Bottom" Width="250px" Margin="0,0,0,25"></TextBox>
+        <TextBox Grid.Row="1" Grid.Column="1" Name="TbDrugName" VerticalAlignment="Bottom" Width="250px" Margin="0,0,0,25"></TextBox>
 
         <TextBlock Grid.Row="1" Grid.Column="2" Text="Тип препарата" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,25,0,0"></TextBlock>
-        <TextBox Grid.Row="1" Grid.Column="2" Name="LbDrugType" VerticalAlignment="Bottom" Width="250px" Margin="0,0,0,25"></TextBox>
+        <ComboBox Grid.Row="1" Grid.Column="2" Name="CbDrugType" VerticalAlignment="Bottom" Width="250px" Height="45px" Margin="0,0,0,25"></ComboBox>
 
         <TextBlock Grid.Row="2" Grid.Column="1" Text="Описание" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,25,0,0"></TextBlock>
-        <TextBox Grid.Row="2" Grid.Column="1" Name="LbDescription" VerticalAlignment="Bottom" Width="250px" Margin="0,0,0,25"></TextBox>
+        <TextBox Grid.Row="2" Grid.Column="1" Name="TbDescription" VerticalAlignment="Bottom" Width="250px" Margin="0,0,0,25"></TextBox>
 
         <TextBlock Grid.Row="2" Grid.Column="2" Text="Полка на складе" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,25,0,0"></TextBlock>
-        <TextBox Grid.Row="2" Grid.Column="2" Name="LbStockShelf" VerticalAlignment="Bottom" Width="250px" Margin="0,0,0,25"></TextBox>
+        <TextBox Grid.Row="2" Grid.Column="2" Name="TbStockShelf" VerticalAlignment="Bottom" Width="250px" Margin="0,0,0,25"></TextBox>
 
-        <Button Name="BtnSave" Click="BtnSave_Click" Grid.Row="3" Grid.Column="1" Content="Сохранить" Width="120px" Grid.ColumnSpan="2"></Button>
+        <TextBlock Grid.Row="3" Grid.Column="1" Text="Дата хранения" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,25,0,0"></TextBlock>
+        <DatePicker Grid.Row="3" Grid.Column="1" Name="DpDate" VerticalAlignment="Bottom" Width="250px" FontSize="36" Margin="0,0,0,25"></DatePicker>
+
+        <Button Name="BtnSave" Click="BtnSave_Click" Grid.Row="3" Grid.Column="2" Content="Сохранить" Width="120px"></Button>
     </Grid>
 </Page>

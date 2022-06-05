@@ -12,6 +12,11 @@
     <Property Name="ShortClientName" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
     <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="Price" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="DateBeg" Type="DateTime" Precision="3" />
+    <Property Name="PassNum" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PassSer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PassReg" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="Doctor" Relationship="Self.FK_Bill_Doctor" FromRole="Bill" ToRole="Doctor" />
     <NavigationProperty Name="Stock" Relationship="Self.FK_Bill_Stock" FromRole="Bill" ToRole="Stock" />
   </EntityType>

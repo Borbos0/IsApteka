@@ -17,6 +17,11 @@
           <Property Name="ShortClientName" Type="nvarchar" MaxLength="80" />
           <Property Name="Description" Type="nvarchar(max)" />
           <Property Name="Price" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+          <Property Name="Status" Type="int" />
+          <Property Name="DateBeg" Type="datetime" />
+          <Property Name="PassNum" Type="nvarchar(max)" />
+          <Property Name="PassSer" Type="nvarchar(max)" />
+          <Property Name="PassReg" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="Doctor">
           <Key>
@@ -191,6 +196,11 @@
           <Property Name="ShortClientName" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
           <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Price" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+          <Property Name="Status" Type="Int32" />
+          <Property Name="DateBeg" Type="DateTime" Precision="3" />
+          <Property Name="PassNum" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PassSer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PassReg" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Doctor" Relationship="Self.FK_Bill_Doctor" FromRole="Bill" ToRole="Doctor" />
           <NavigationProperty Name="Stock" Relationship="Self.FK_Bill_Stock" FromRole="Bill" ToRole="Stock" />
         </EntityType>
@@ -375,6 +385,11 @@
                 <ScalarProperty Name="ShortClientName" ColumnName="ShortClientName" />
                 <ScalarProperty Name="Description" ColumnName="Description" />
                 <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="DateBeg" ColumnName="DateBeg" />
+                <ScalarProperty Name="PassNum" ColumnName="PassNum" />
+                <ScalarProperty Name="PassSer" ColumnName="PassSer" />
+                <ScalarProperty Name="PassReg" ColumnName="PassReg" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

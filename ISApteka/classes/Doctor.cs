@@ -4,17 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ISApteka.classes
+namespace ISApteka
 {
     partial class Doctor
     {
-        //public string FixedImageDoctor
-        //{
-        //    get
-        //    {
-        //        if (String.IsNullOrEmpty(DrugImage) || String.IsNullOrWhiteSpace(DrugImage)) return @"/logo/logo.png";
-        //        else return DrugImage;
-        //    }
-        //}
+        public string FixedImageDoctor
+        {
+            get
+            {
+                if (String.IsNullOrEmpty(DoctorImg) || String.IsNullOrWhiteSpace(DoctorImg)) return @"/img/imageDoc.png";
+                else return DoctorImg;
+            }
+        }
     }
 }

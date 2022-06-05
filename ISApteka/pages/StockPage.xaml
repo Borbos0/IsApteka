@@ -33,10 +33,16 @@
                 <TextBlock FontSize="15" Text=" из "></TextBlock>
                 <TextBlock FontSize="15" Name="TbCountAll"></TextBlock>
             </StackPanel>
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal"
+                        Grid.Column="3" Margin="0,30,0,0">
+                <TextBlock FontSize="15" Text="Всего на складе:"></TextBlock>
+                <TextBlock FontSize="15" Name="TbDrugType"></TextBlock>
+            </StackPanel>
         </Grid>
 
         <Button Name="BtnAdd" Click="BtnAdd_Click" Grid.Row="2" HorizontalAlignment="Left" Margin="5,0,0,0" Content="Добавить"></Button>
         <Button Name="BtnEdit" Click="BtnEdit_Click" Grid.Row="2" HorizontalAlignment="Right" Margin="0,0,5,0" Content="Изменить"></Button>
+        <Button Name="BtnDelete" Click="BtnDelete_Click" Grid.Row="2" Content="Удалить"></Button>
       
         <ListBox Name="LbStock" Grid.Row="1" HorizontalAlignment="Stretch"
                  SelectionChanged="LbStock_SelectionChanged">

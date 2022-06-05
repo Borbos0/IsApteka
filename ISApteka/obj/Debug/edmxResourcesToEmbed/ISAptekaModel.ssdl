@@ -12,6 +12,11 @@
     <Property Name="ShortClientName" Type="nvarchar" MaxLength="80" />
     <Property Name="Description" Type="nvarchar(max)" />
     <Property Name="Price" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="Status" Type="int" />
+    <Property Name="DateBeg" Type="datetime" />
+    <Property Name="PassNum" Type="nvarchar(max)" />
+    <Property Name="PassSer" Type="nvarchar(max)" />
+    <Property Name="PassReg" Type="nvarchar(max)" />
   </EntityType>
   <EntityType Name="Doctor">
     <Key>

@@ -22,6 +22,11 @@ namespace ISApteka
         public string ShortClientName { get; set; }
         public string Description { get; set; }
         public decimal Price { get; set; }
+        public Nullable<int> Status { get; set; }
+        public Nullable<System.DateTime> DateBeg { get; set; }
+        public string PassNum { get; set; }
+        public string PassSer { get; set; }
+        public string PassReg { get; set; }
     
         public virtual Doctor Doctor { get; set; }
         public virtual Stock Stock { get; set; }
