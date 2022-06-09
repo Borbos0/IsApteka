@@ -35,7 +35,7 @@
             </StackPanel>
             <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal"
                         Grid.Column="3" Margin="0,30,0,0">
-                <TextBlock FontSize="15" Text="Всего на сумму:"></TextBlock>
+                <TextBlock FontSize="15" Text="Всего на сумму: "></TextBlock>
                 <TextBlock FontSize="15" Name="TbPrice"></TextBlock>
             </StackPanel>
         </Grid>

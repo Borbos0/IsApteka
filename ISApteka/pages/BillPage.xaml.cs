@@ -48,6 +48,12 @@ namespace ISApteka.pages
 
             LbBill.ItemsSource = bill;
             TbCount.Text = bill.Count.ToString();
+            int summ = 0;
+            foreach(var el in bill)
+            {
+                summ += Decimal.ToInt32(el.Price);
+            }
+            TbPrice.Text = summ.ToString();
 
             switch (CbSort.SelectedIndex)
             {

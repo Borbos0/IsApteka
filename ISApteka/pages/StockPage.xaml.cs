@@ -63,6 +63,13 @@ namespace ISApteka.pages
             }
             LbStock.ItemsSource = stock;
             TbCount.Text = stock.Count.ToString();
+
+            int summ = 0;
+            foreach (var el in stock)
+            {
+                summ += Decimal.ToInt32(el.CountInStock);
+            }
+            TbDrugType.Text = summ.ToString();
         }
 
         private void TbSearch_TextChanged(object sender, TextChangedEventArgs e)

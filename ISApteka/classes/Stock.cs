@@ -16,5 +16,9 @@ namespace ISApteka
                 else return DrugImage;
             }
         }
+        public override string ToString()
+        {
+            return DrugName;
+        }
     }
 }
