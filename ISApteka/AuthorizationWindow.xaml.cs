@@ -26,7 +26,7 @@ namespace ISApteka
 
         public void AuthorizationUser()
         {
-            var auth = DB.db.Users.FirstOrDefault(u => u.UserLogin == TbLogin.Password);
+            var auth = DB.db.Users.FirstOrDefault(u => u.UserLogin == TbLogin.Text && u.UserPassword == TbPass.Password);
 
             try
             {
@@ -39,7 +39,7 @@ namespace ISApteka
                 }
                 else
                 {
-                    MessageBox.Show("Пользователя с таким логином не существует");
+                    MessageBox.Show("Пользователя с таким логином и паролем не существует");
                 }
             }
             catch (Exception)

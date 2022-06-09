@@ -16,5 +16,9 @@ namespace ISApteka
                 else return DoctorImg;
             }
         }
+        public override string ToString()
+        {
+            return DoctorName + " " + DoctorSecondName + " " + DoctorSurname;
+        }
     }
 }

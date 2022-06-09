@@ -36,3 +36,4 @@ C:\Users\User\Desktop\ISApteka\ISApteka\obj\Debug\pages\AddBillPage.baml
 C:\Users\User\Desktop\ISApteka\ISApteka\obj\Debug\pages\AddDoctorPage.baml
 C:\Users\User\Desktop\ISApteka\ISApteka\obj\Debug\pages\BillPage.g.cs
 C:\Users\User\Desktop\ISApteka\ISApteka\obj\Debug\pages\BillPage.baml
+C:\Users\User\Desktop\ISApteka\ISApteka\obj\Debug\ISApteka.csproj.AssemblyReference.cache

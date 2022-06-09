@@ -65,34 +65,37 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Bill.cs">
-      <DependentUpon>IsAptekaModel.tt</DependentUpon>
+      <DependentUpon>ISAptekaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="classes\Bill.cs" />
     <Compile Include="classes\Doctor.cs" />
     <Compile Include="classes\Stock.cs" />
+    <Compile Include="Departament.cs">
+      <DependentUpon>ISAptekaModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Doctor.cs">
-      <DependentUpon>IsAptekaModel.tt</DependentUpon>
+      <DependentUpon>ISAptekaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DoctorDegree.cs">
-      <DependentUpon>IsAptekaModel.tt</DependentUpon>
+      <DependentUpon>ISAptekaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DrugType.cs">
-      <DependentUpon>IsAptekaModel.tt</DependentUpon>
+      <DependentUpon>ISAptekaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="IsAptekaModel.Context.cs">
+    <Compile Include="ISAptekaModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>IsAptekaModel.Context.tt</DependentUpon>
+      <DependentUpon>ISAptekaModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="IsAptekaModel.cs">
+    <Compile Include="ISAptekaModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>IsAptekaModel.tt</DependentUpon>
+      <DependentUpon>ISAptekaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="IsAptekaModel.Designer.cs">
+    <Compile Include="ISAptekaModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>IsAptekaModel.edmx</DependentUpon>
+      <DependentUpon>ISAptekaModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="pages\AddBillPage.xaml.cs">
       <DependentUpon>AddBillPage.xaml</DependentUpon>
@@ -110,16 +113,16 @@
       <DependentUpon>DoctorPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Stock.cs">
-      <DependentUpon>IsAptekaModel.tt</DependentUpon>
+      <DependentUpon>ISAptekaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Supplier.cs">
-      <DependentUpon>IsAptekaModel.tt</DependentUpon>
+      <DependentUpon>ISAptekaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="sysdiagrams.cs">
-      <DependentUpon>IsAptekaModel.tt</DependentUpon>
+      <DependentUpon>ISAptekaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Users.cs">
-      <DependentUpon>IsAptekaModel.tt</DependentUpon>
+      <DependentUpon>ISAptekaModel.tt</DependentUpon>
     </Compile>
     <Page Include="AuthorizationWindow.xaml">
       <SubType>Designer</SubType>
@@ -195,12 +198,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="IsAptekaModel.edmx">
+    <EntityDeploy Include="ISAptekaModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>IsAptekaModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>ISAptekaModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="IsAptekaModel.edmx.diagram">
-      <DependentUpon>IsAptekaModel.edmx</DependentUpon>
+    <None Include="ISAptekaModel.edmx.diagram">
+      <DependentUpon>ISAptekaModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -236,15 +239,18 @@
     <Resource Include="img\ImageBill.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="IsAptekaModel.Context.tt">
+    <Resource Include="logo\icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ISAptekaModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>IsAptekaModel.edmx</DependentUpon>
-      <LastGenOutput>IsAptekaModel.Context.cs</LastGenOutput>
+      <DependentUpon>ISAptekaModel.edmx</DependentUpon>
+      <LastGenOutput>ISAptekaModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="IsAptekaModel.tt">
+    <Content Include="ISAptekaModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>IsAptekaModel.edmx</DependentUpon>
-      <LastGenOutput>IsAptekaModel.cs</LastGenOutput>
+      <DependentUpon>ISAptekaModel.edmx</DependentUpon>
+      <LastGenOutput>ISAptekaModel.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

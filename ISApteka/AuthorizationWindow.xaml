@@ -5,16 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ISApteka"
         mc:Ignorable="d"
-        Title="Авторизация" Height="450" Width="700" Icon="logo/icon.jpg" WindowStartupLocation="CenterScreen"
+        Title="Авторизация" Height="450" Width="700" Icon="logo/icon.ico" WindowStartupLocation="CenterScreen"
         MinHeight="450" MinWidth="700" MaxHeight="450" MaxWidth="700">
-    <Grid Background="LimeGreen">
-        <PasswordBox Name="TbLogin" Width="250px" PasswordChar="*"></PasswordBox>
-        <PasswordBox Name="TbPass" Visibility="Hidden"></PasswordBox>
+    <Grid Background="#D4D925">
+        <TextBox Name="TbLogin" Width="250px"></TextBox>
+        <PasswordBox Name="TbPass" Margin="0,100,0,0" Width="250px" PasswordChar="*"></PasswordBox>
         <Button Name="BtnEnter" Click="BtnEnter_Click" Content="Вход" VerticalAlignment="Bottom" Margin="0,0,0,50" IsDefault="True"/>
         <TextBlock Text="Аптека «Ромашка»" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,130"></TextBlock>
-        <TextBlock Text="Регистрация пользователя" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,85"></TextBlock>
+        <TextBlock Text="Авторизация пользователя" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,85"></TextBlock>
         <Image Source="logo/logo.png" VerticalAlignment="Top" HorizontalAlignment="Center" Width="120px"></Image>
         <TextBlock Text="Версия сборки 0.8.8.1" VerticalAlignment="Bottom"></TextBlock>
-        <TextBlock Text="Пароль:" VerticalAlignment="Center" Margin="140,0,0,0"></TextBlock>
+        <TextBlock Text="Логин:" VerticalAlignment="Center" Margin="140,196,476,196"></TextBlock>
+        <TextBlock Text="Пароль:" VerticalAlignment="Center" Margin="140,246,471,146"></TextBlock>
     </Grid>
 </Window>

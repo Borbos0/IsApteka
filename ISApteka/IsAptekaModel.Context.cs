@@ -26,6 +26,7 @@ namespace ISApteka
         }
     
         public virtual DbSet<Bill> Bill { get; set; }
+        public virtual DbSet<Departament> Departament { get; set; }
         public virtual DbSet<Doctor> Doctor { get; set; }
         public virtual DbSet<DoctorDegree> DoctorDegree { get; set; }
         public virtual DbSet<DrugType> DrugType { get; set; }

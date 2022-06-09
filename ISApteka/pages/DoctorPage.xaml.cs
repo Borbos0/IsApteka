@@ -28,7 +28,7 @@ namespace ISApteka.pages
             BtnEdit.Visibility = Visibility.Hidden;
             BtnDelete.Visibility = Visibility.Hidden;
 
-            CbFilter.Items.Add("Все ученые степени");
+            CbFilter.Items.Add("Все должности");
             foreach (var doctorT in DB.db.DoctorDegree)
             {
                 CbFilter.Items.Add(doctorT.DoctorDegreeName);

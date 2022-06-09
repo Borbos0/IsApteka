@@ -80,7 +80,7 @@
                                 <Run Text=" | "></Run>
                                 <Run Text="{Binding Stock.DrugName}"></Run>
                                 <Run Text=" | "></Run>
-                                <Run Text="{Binding ShortClientName}"></Run>
+                                <Run Text="{Binding ClientName}"></Run>
                             </TextBlock>
 
                             <TextBlock>

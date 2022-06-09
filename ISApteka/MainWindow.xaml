@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ISApteka"
         mc:Ignorable="d"
-        Title="ООО Аптека «Ромашка»" Height="750" Width="1000" Icon="logo/icon.jpg" WindowStartupLocation="CenterScreen"
+        Title="ООО Аптека «Ромашка»" Height="750" Width="1000" Icon="logo/icon.ico" WindowStartupLocation="CenterScreen"
         MinHeight="750" MinWidth="1000">
     <Grid>
         <Grid.RowDefinitions>
@@ -14,7 +14,7 @@
             <RowDefinition Height="35px"/>
         </Grid.RowDefinitions>
 
-        <Grid Background="Aqua">
+        <Grid Background="#990000">
             <Image Source="logo/logo.png" HorizontalAlignment="Left"></Image>
             <TextBlock Text="Аптека «Ромашка»" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
         </Grid>

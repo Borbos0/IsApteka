@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ISAptekaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Bill">
+    <Key>
+      <PropertyRef Name="BillID" />
+    </Key>
+    <Property Name="BillID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StockID" Type="Int32" Nullable="false" />
+    <Property Name="CountBill" Type="Int32" Nullable="false" />
+    <Property Name="DoctorID" Type="Int32" Nullable="false" />
+    <Property Name="ClientName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ShortClientName" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Price" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="DateBeg" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PassNum" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PassSer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PassReg" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="BillImage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Doctor" Relationship="Self.FK_Bill_Doctor" FromRole="Bill" ToRole="Doctor" />
+    <NavigationProperty Name="Stock" Relationship="Self.FK_Bill_Stock" FromRole="Bill" ToRole="Stock" />
+  </EntityType>
+  <EntityType Name="Doctor">
+    <Key>
+      <PropertyRef Name="DoctorID" />
+    </Key>
+    <Property Name="DoctorID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DoctorName" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DoctorSecondName" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DoctorSurname" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="DoctorDegreeID" Type="Int32" Nullable="false" />
+    <Property Name="DoctorImg" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Bill" Relationship="Self.FK_Bill_Doctor" FromRole="Doctor" ToRole="Bill" />
+    <NavigationProperty Name="DoctorDegree" Relationship="Self.FK_Doctor_DoctorDegree" FromRole="Doctor" ToRole="DoctorDegree" />
+  </EntityType>
+  <EntityType Name="DoctorDegree">
+    <Key>
+      <PropertyRef Name="DoctorDegreeID" />
+    </Key>
+    <Property Name="DoctorDegreeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DoctorDegreeName" Type="String" MaxLength="90" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Doctor" Relationship="Self.FK_Doctor_DoctorDegree" FromRole="DoctorDegree" ToRole="Doctor" />
+  </EntityType>
+  <EntityType Name="DrugType">
+    <Key>
+      <PropertyRef Name="DrugTypeID" />
+    </Key>
+    <Property Name="DrugTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DrugTypeName" Type="String" MaxLength="80" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Stock" Relationship="Self.FK_Stock_DrugType" FromRole="DrugType" ToRole="Stock" />
+  </EntityType>
+  <EntityType Name="Stock">
+    <Key>
+      <PropertyRef Name="StockID" />
+    </Key>
+    <Property Name="StockID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SupplierID" Type="Int32" Nullable="false" />
+    <Property Name="CountInStock" Type="Int32" Nullable="false" />
+    <Property Name="DrugName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DrugTypeID" Type="Int32" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="StockShelf" Type="Int32" Nullable="false" />
+    <Property Name="DrugImage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DateEnd" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Bill" Relationship="Self.FK_Bill_Stock" FromRole="Stock" ToRole="Bill" />
+    <NavigationProperty Name="DrugType" Relationship="Self.FK_Stock_DrugType" FromRole="Stock" ToRole="DrugType" />
+    <NavigationProperty Name="Supplier" Relationship="Self.FK_Stock_Supplier" FromRole="Stock" ToRole="Supplier" />
+  </EntityType>
+  <EntityType Name="Supplier">
+    <Key>
+      <PropertyRef Name="SupplierID" />
+    </Key>
+    <Property Name="SupplierID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SupplierName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SupplierAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Stock" Relationship="Self.FK_Stock_Supplier" FromRole="Supplier" ToRole="Stock" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserLogin" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UserSecondName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UserSurname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_Bill_Doctor">
+    <End Role="Doctor" Type="Self.Doctor" Multiplicity="1" />
+    <End Role="Bill" Type="Self.Bill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Doctor">
+        <PropertyRef Name="DoctorID" />
+      </Principal>
+      <Dependent Role="Bill">
+        <PropertyRef Name="DoctorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Bill_Stock">
+    <End Role="Stock" Type="Self.Stock" Multiplicity="1" />
+    <End Role="Bill" Type="Self.Bill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stock">
+        <PropertyRef Name="StockID" />
+      </Principal>
+      <Dependent Role="Bill">
+        <PropertyRef Name="StockID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Doctor_DoctorDegree">
+    <End Role="DoctorDegree" Type="Self.DoctorDegree" Multiplicity="1" />
+    <End Role="Doctor" Type="Self.Doctor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DoctorDegree">
+        <PropertyRef Name="DoctorDegreeID" />
+      </Principal>
+      <Dependent Role="Doctor">
+        <PropertyRef Name="DoctorDegreeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Stock_DrugType">
+    <End Role="DrugType" Type="Self.DrugType" Multiplicity="1" />
+    <End Role="Stock" Type="Self.Stock" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DrugType">
+        <PropertyRef Name="DrugTypeID" />
+      </Principal>
+      <Dependent Role="Stock">
+        <PropertyRef Name="DrugTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Stock_Supplier">
+    <End Role="Supplier" Type="Self.Supplier" Multiplicity="1" />
+    <End Role="Stock" Type="Self.Stock" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Supplier">
+        <PropertyRef Name="SupplierID" />
+      </Principal>
+      <Dependent Role="Stock">
+        <PropertyRef Name="SupplierID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ISAptekaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Bill" EntityType="Self.Bill" />
+    <EntitySet Name="Doctor" EntityType="Self.Doctor" />
+    <EntitySet Name="DoctorDegree" EntityType="Self.DoctorDegree" />
+    <EntitySet Name="DrugType" EntityType="Self.DrugType" />
+    <EntitySet Name="Stock" EntityType="Self.Stock" />
+    <EntitySet Name="Supplier" EntityType="Self.Supplier" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="Users" EntityType="Self.Users" />
+    <AssociationSet Name="FK_Bill_Doctor" Association="Self.FK_Bill_Doctor">
+      <End Role="Doctor" EntitySet="Doctor" />
+      <End Role="Bill" EntitySet="Bill" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Bill_Stock" Association="Self.FK_Bill_Stock">
+      <End Role="Stock" EntitySet="Stock" />
+      <End Role="Bill" EntitySet="Bill" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Doctor_DoctorDegree" Association="Self.FK_Doctor_DoctorDegree">
+      <End Role="DoctorDegree" EntitySet="DoctorDegree" />
+      <End Role="Doctor" EntitySet="Doctor" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Stock_DrugType" Association="Self.FK_Stock_DrugType">
+      <End Role="DrugType" EntitySet="DrugType" />
+      <End Role="Stock" EntitySet="Stock" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Stock_Supplier" Association="Self.FK_Stock_Supplier">
+      <End Role="Supplier" EntitySet="Supplier" />
+      <End Role="Stock" EntitySet="Stock" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

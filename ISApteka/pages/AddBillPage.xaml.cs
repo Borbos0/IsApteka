@@ -28,9 +28,6 @@ namespace ISApteka.pages
             this.bill = bill;
 
             CbDoctor.ItemsSource = DB.db.Doctor.ToList();
-            CbDoctor.DisplayMemberPath = "DoctorName";
-            //CbDoctor.DisplayMemberPath = "DoctorSecondName";
-            //CbDoctor.DisplayMemberPath = "DoctorSurname";
             CbDoctor.SelectedValuePath = "DoctorID";
 
             CbDrugName.ItemsSource = DB.db.Stock.ToList();
@@ -48,7 +45,7 @@ namespace ISApteka.pages
         }
         public void CheckBill()
         {
-            TbClientName.Text = bill.ShortClientName;
+            TbClientName.Text = bill.ClientName;
             TbDescription.Text = bill.Description;
             TbPrice.Text = bill.Price.ToString();
             DpDate.Text = bill.DateBeg;
@@ -83,7 +80,7 @@ namespace ISApteka.pages
             {
                 try
                 {
-                    bill.ShortClientName = TbClientName.Text;
+                    bill.ClientName = TbClientName.Text;
                     bill.Description = TbDescription.Text;
                     bill.Price = int.Parse(TbPrice.Text);
                     bill.Stock = (Stock)CbDrugName.SelectedItem;

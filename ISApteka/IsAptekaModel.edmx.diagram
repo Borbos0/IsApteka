@@ -4,17 +4,19 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="47581324e9bd4d9a8f6a727a52b5821a" Name="Diagram1">
+      <Diagram DiagramId="78bf15df36a040c6b0f2cd05807625e2" Name="Diagram1">
         <EntityTypeShape EntityType="ISAptekaModel.Bill" Width="1.5" PointX="5.25" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ISAptekaModel.Departament" Width="1.5" PointX="5.75" PointY="9" IsExpanded="true" />
         <EntityTypeShape EntityType="ISAptekaModel.Doctor" Width="1.5" PointX="3" PointY="8.375" IsExpanded="true" />
         <EntityTypeShape EntityType="ISAptekaModel.DoctorDegree" Width="1.5" PointX="0.75" PointY="8.875" IsExpanded="true" />
         <EntityTypeShape EntityType="ISAptekaModel.DrugType" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
         <EntityTypeShape EntityType="ISAptekaModel.Stock" Width="1.5" PointX="3" PointY="3" IsExpanded="true" />
         <EntityTypeShape EntityType="ISAptekaModel.Supplier" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ISAptekaModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="8.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="ISAptekaModel.Users" Width="1.5" PointX="7.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ISAptekaModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ISAptekaModel.Users" Width="1.5" PointX="8" PointY="8.5" IsExpanded="true" />
         <AssociationConnector Association="ISAptekaModel.FK_Bill_Doctor" ManuallyRouted="false" />
         <AssociationConnector Association="ISAptekaModel.FK_Bill_Stock" ManuallyRouted="false" />
+        <AssociationConnector Association="ISAptekaModel.FK_Users_Departament" ManuallyRouted="false" />
         <AssociationConnector Association="ISAptekaModel.FK_Doctor_DoctorDegree" ManuallyRouted="false" />
         <AssociationConnector Association="ISAptekaModel.FK_Stock_DrugType" ManuallyRouted="false" />
         <AssociationConnector Association="ISAptekaModel.FK_Stock_Supplier" ManuallyRouted="false" />

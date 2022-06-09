@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище ISAptekaModelContainer" CdmEntityContainer="ISAptekaEntities">
+    <EntitySetMapping Name="Bill">
+      <EntityTypeMapping TypeName="ISAptekaModel.Bill">
+        <MappingFragment StoreEntitySet="Bill">
+          <ScalarProperty Name="BillID" ColumnName="BillID" />
+          <ScalarProperty Name="StockID" ColumnName="StockID" />
+          <ScalarProperty Name="CountBill" ColumnName="CountBill" />
+          <ScalarProperty Name="DoctorID" ColumnName="DoctorID" />
+          <ScalarProperty Name="ClientName" ColumnName="ClientName" />
+          <ScalarProperty Name="ShortClientName" ColumnName="ShortClientName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="DateBeg" ColumnName="DateBeg" />
+          <ScalarProperty Name="PassNum" ColumnName="PassNum" />
+          <ScalarProperty Name="PassSer" ColumnName="PassSer" />
+          <ScalarProperty Name="PassReg" ColumnName="PassReg" />
+          <ScalarProperty Name="BillImage" ColumnName="BillImage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Doctor">
+      <EntityTypeMapping TypeName="ISAptekaModel.Doctor">
+        <MappingFragment StoreEntitySet="Doctor">
+          <ScalarProperty Name="DoctorID" ColumnName="DoctorID" />
+          <ScalarProperty Name="DoctorName" ColumnName="DoctorName" />
+          <ScalarProperty Name="DoctorSecondName" ColumnName="DoctorSecondName" />
+          <ScalarProperty Name="DoctorSurname" ColumnName="DoctorSurname" />
+          <ScalarProperty Name="DoctorDegreeID" ColumnName="DoctorDegreeID" />
+          <ScalarProperty Name="DoctorImg" ColumnName="DoctorImg" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DoctorDegree">
+      <EntityTypeMapping TypeName="ISAptekaModel.DoctorDegree">
+        <MappingFragment StoreEntitySet="DoctorDegree">
+          <ScalarProperty Name="DoctorDegreeID" ColumnName="DoctorDegreeID" />
+          <ScalarProperty Name="DoctorDegreeName" ColumnName="DoctorDegreeName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DrugType">
+      <EntityTypeMapping TypeName="ISAptekaModel.DrugType">
+        <MappingFragment StoreEntitySet="DrugType">
+          <ScalarProperty Name="DrugTypeID" ColumnName="DrugTypeID" />
+          <ScalarProperty Name="DrugTypeName" ColumnName="DrugTypeName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Stock">
+      <EntityTypeMapping TypeName="ISAptekaModel.Stock">
+        <MappingFragment StoreEntitySet="Stock">
+          <ScalarProperty Name="StockID" ColumnName="StockID" />
+          <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+          <ScalarProperty Name="CountInStock" ColumnName="CountInStock" />
+          <ScalarProperty Name="DrugName" ColumnName="DrugName" />
+          <ScalarProperty Name="DrugTypeID" ColumnName="DrugTypeID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="StockShelf" ColumnName="StockShelf" />
+          <ScalarProperty Name="DrugImage" ColumnName="DrugImage" />
+          <ScalarProperty Name="DateEnd" ColumnName="DateEnd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Supplier">
+      <EntityTypeMapping TypeName="ISAptekaModel.Supplier">
+        <MappingFragment StoreEntitySet="Supplier">
+          <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+          <ScalarProperty Name="SupplierName" ColumnName="SupplierName" />
+          <ScalarProperty Name="SupplierAddress" ColumnName="SupplierAddress" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="ISAptekaModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="ISAptekaModel.Users">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="UserLogin" ColumnName="UserLogin" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserSecondName" ColumnName="UserSecondName" />
+          <ScalarProperty Name="UserSurname" ColumnName="UserSurname" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

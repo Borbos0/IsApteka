@@ -21,6 +21,14 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Departament">
+      <EntityTypeMapping TypeName="ISAptekaModel.Departament">
+        <MappingFragment StoreEntitySet="Departament">
+          <ScalarProperty Name="DepartamentID" ColumnName="DepartamentID" />
+          <ScalarProperty Name="DepartamentName" ColumnName="DepartamentName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Doctor">
       <EntityTypeMapping TypeName="ISAptekaModel.Doctor">
         <MappingFragment StoreEntitySet="Doctor">
@@ -89,9 +97,11 @@
         <MappingFragment StoreEntitySet="Users">
           <ScalarProperty Name="UserID" ColumnName="UserID" />
           <ScalarProperty Name="UserLogin" ColumnName="UserLogin" />
+          <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
           <ScalarProperty Name="UserName" ColumnName="UserName" />
           <ScalarProperty Name="UserSecondName" ColumnName="UserSecondName" />
           <ScalarProperty Name="UserSurname" ColumnName="UserSurname" />
+          <ScalarProperty Name="DepartamentID" ColumnName="DepartamentID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
